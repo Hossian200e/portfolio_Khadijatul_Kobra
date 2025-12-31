@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/pages/Skills.css";
-import { FaReact, FaPython, FaLaptopCode, FaDatabase, FaCuttlefish } from "react-icons/fa";
+import { FaReact, FaPython, FaLaptopCode, FaDatabase, FaCuttlefish, FaFileAlt } from "react-icons/fa";
 
 const skillsList = [
   { name: "React.js", icon: <FaReact /> },
@@ -9,6 +9,8 @@ const skillsList = [
   { name: "C / C++", icon: <FaCuttlefish /> },
   { name: "Python", icon: <FaPython /> },
   { name: "Machine Learning", icon: <FaDatabase /> },
+  { name: "MS Office", icon: <FaFileAlt /> },
+  { name: "Google Workspace", icon: <FaFileAlt /> },
 ];
 
 const files = [
@@ -67,7 +69,7 @@ const Skills = () => {
     <section id="skills" className="skills-section">
       <h2 className="skills-title">My Skills</h2>
       <p className="skills-intro">
-        Technologies and tools I use to build modern web applications and explore AI.
+        Technologies, tools, and software I use to build modern web applications, explore AI, and manage work efficiently.
       </p>
 
       {/* MARQUEE SKILLS */}
@@ -111,12 +113,14 @@ const Skills = () => {
 
         {/* FOOTER */}
         <div className="code-footer">
-          <span>{activeFile.name.includes(".cpp") ? "C++ · UTF-8" : "Shell / JSON · UTF-8"}</span>
+          <span>
+            {activeFile.name.includes(".cpp") ? "C++ · UTF-8" : "Shell / JSON · UTF-8"}
+          </span>
           <span>
             {activeFile.name === "languages.cpp"
-              ? 22 + " Skills Loaded"
+              ? `${skillsList.length} Skills Loaded`
               : activeFile.name === "package.json"
-              ? Object.keys(JSON.parse(activeFile.content.replace(/\n/g, ""))).length + " Packages"
+              ? `${Object.keys(JSON.parse(activeFile.content.replace(/\n/g, ""))).length} Packages`
               : "Setup Script"}
           </span>
         </div>

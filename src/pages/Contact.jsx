@@ -5,9 +5,9 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 const contactDetails = [
   {
     type: "Email",
-    value: "your-email@gmail.com",
+    value: "anisarahman1119@gmail.com",
     icon: <FaEnvelope />,
-    link: "mailto:your-email@gmail.com",
+    link: "mailto:anisarahman1119@gmail.com",
   },
   {
     type: "GitHub",
@@ -23,9 +23,9 @@ const contactDetails = [
   },
   {
     type: "Phone",
-    value: "+880 1XXXXXXXXX",
+    value: "+8801307171541",
     icon: <FaPhone />,
-    link: "tel:+8801XXXXXXXXX",
+    link: "tel:+8801307171541",
   },
 ];
 
@@ -34,7 +34,7 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <h2 className="contact-title">Get In Touch</h2>
       <p className="contact-intro">
-        Feel free to reach out to me for collaborations, projects, or just a friendly hello.
+        Feel free to reach out for collaborations, projects, or a friendly hello.
       </p>
 
       <div className="contact-grid">

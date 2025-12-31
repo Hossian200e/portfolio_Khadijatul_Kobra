@@ -13,6 +13,18 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
+  const menuItems = [
+    "home",
+    "about",
+    "education",
+    "experience",
+    "skills",
+    "projects",
+    "achievements",
+    "hobbies",
+    "contact",
+  ];
+
   return (
     <>
       {/* NAVBAR */}
@@ -33,15 +45,7 @@ const Navbar = () => {
 
           {/* Menu */}
           <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-            {[
-              "home",
-              "about",
-              "experience",
-              "skills",
-              "projects",
-              "achievements",
-              "contact",
-            ].map((item) => (
+            {menuItems.map((item) => (
               <li key={item}>
                 <a href={`#${item}`} onClick={() => setMenuOpen(false)}>
                   {item.charAt(0).toUpperCase() + item.slice(1)}

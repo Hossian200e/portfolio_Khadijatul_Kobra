@@ -1,0 +1,86 @@
+.education-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.education-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.education-intro {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.education-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: center;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  background: #e0e7ff;
+}
+
+.education-icon {
+  font-size: 36px;
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.education-degree {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.education-institution {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.education-year {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Dark Mode */
+body.dark-mode .education-card {
+  background: #1f1f1f;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .education-card:hover {
+  background: #3730a3;
+}
+
+body.dark-mode .education-degree,
+body.dark-mode .education-icon {
+  color: #e2e8f0;
+}
+
+body.dark-mode .education-institution,
+body.dark-mode .education-year {
+  color: #cbd5e1;
+}

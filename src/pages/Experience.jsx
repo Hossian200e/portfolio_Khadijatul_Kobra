@@ -1,49 +1,41 @@
 import React, { useState } from "react";
 import "../assets/pages/Experience.css";
-import { FaBriefcase, FaLightbulb } from "react-icons/fa";
 
 const jobExperiences = [
   {
-    title: "Frontend Developer",
-    company: "TechReform BD",
-    duration: "Jan 2025 - Present",
+    title: "Account Manager",
+    company: "Eastern Bank Ltd.",
+    duration: "July 2020 – May 2021",
     description: [
-      "Developed responsive web applications using React and Next.js.",
-      "Implemented dynamic dashboards and reusable UI components.",
-      "Collaborated with backend team to integrate APIs efficiently.",
+      "Supported clients and the team in achieving their goals.",
+      "Managed client relationships and resolved account-related issues.",
+      "Built trust and long-term client relationships through communication.",
+      "Coordinated with internal teams to improve operational efficiency.",
+      "Thrived in challenging environments and contributed to success.",
     ],
   },
   {
-    title: "Intern Software Engineer",
-    company: "DevStudio AI",
-    duration: "Jun 2024 - Dec 2024",
+    title: "Sales Manager (Product Sales)",
+    company: "RJ Fashion",
+    duration: "March 2024 – November 2024",
     description: [
-      "Assisted in building AI-based web tools using React and Node.js.",
-      "Optimized application performance and reduced load time by 25%.",
-      "Participated in code reviews and agile sprints.",
-    ],
-  },
-];
-
-const entrepreneurExperiences = [
-  {
-    title: "Founder & CEO",
-    company: "DevStudy AI Suite",
-    duration: "2025 (Present)",
-    description: [
-      "Built AI-powered learning tools with Next.js & React.",
-      "Managed a small team of developers and designers.",
-      "Created solutions to simplify programming for students.",
+      "Led project-based sales initiatives to meet targets.",
+      "Communicated with clients to provide tailored solutions.",
+      "Managed pipelines, follow-ups, and negotiations.",
+      "Analyzed market trends and enhanced sales strategy.",
+      "Ensured customer satisfaction through team coordination.",
     ],
   },
   {
-    title: "Organizer",
-    company: "UAP Programming Contest Club",
-    duration: "2023 - 2025",
+    title: "Counselor",
+    company: "Scholars Global Network (SGN)",
+    duration: "July 2025 – September 2025",
     description: [
-      "Organized programming contests and workshops.",
-      "Mentored junior students in competitive programming.",
-      "Planned events with 50+ participants.",
+      "Provided study abroad guidance for students.",
+      "Managed admission applications and documentation.",
+      "Assisted with visa processing and regular communication.",
+      "Collaborated with team members to deliver service.",
+      "Performed daily outreach calls to promote programs.",
     ],
   },
 ];
@@ -51,29 +43,30 @@ const entrepreneurExperiences = [
 const Experience = () => {
   const [activeTab, setActiveTab] = useState("job");
 
-  const renderExperiences = (experiences, icon) => {
-    return (
-      <div className="experience-row">
-        {experiences.map((exp, index) => (
-          <div key={index} className="experience-card">
-            <div className="experience-header">
-              <div className="experience-icon">{icon}</div>
-              <div className="experience-header-text">
-                <h3 className="experience-title">{exp.title}</h3>
-                <span className="experience-company">{exp.company}</span>
-                <span className="experience-duration">{exp.duration}</span>
-              </div>
-            </div>
-            <ul className="experience-description">
-              {exp.description.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    );
-  };
+  const renderJobExperiences = () => (
+    <div className="experience-grid">
+      {jobExperiences.map((exp, index) => (
+        <div key={index} className="experience-card">
+          <h3 className="experience-title">{exp.title}</h3>
+          <p className="experience-company">{exp.company}</p>
+          <span className="experience-duration">{exp.duration}</span>
+          <ul className="experience-description">
+            {exp.description.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderEntrepreneurLoading = () => (
+    <div className="experience-loading">
+      <div className="spinner"></div>
+      <h3>Entrepreneur & Organizing</h3>
+      <p>Content is currently being prepared. Please check back soon.</p>
+    </div>
+  );
 
   return (
     <section id="experience" className="experience-section">
@@ -95,16 +88,8 @@ const Experience = () => {
       </div>
 
       <div className="experience-container">
-        {activeTab === "job" &&
-          renderExperiences(
-            jobExperiences,
-            <FaBriefcase className="icon" />
-          )}
-        {activeTab === "entrepreneur" &&
-          renderExperiences(
-            entrepreneurExperiences,
-            <FaLightbulb className="icon" />
-          )}
+        {activeTab === "job" && renderJobExperiences()}
+        {activeTab === "entrepreneur" && renderEntrepreneurLoading()}
       </div>
     </section>
   );

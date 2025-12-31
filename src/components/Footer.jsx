@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p className="footer-text">&copy; {new Date().getFullYear()} Mohammmad Hossain. All rights reserved.</p>
+        <p className="footer-text">&copy; {new Date().getFullYear()} MH. All rights reserved.</p>
         <div className="footer-social">
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
             <FaGithub />

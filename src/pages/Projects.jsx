@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../assets/pages/Projects.css";
-import { FaGraduationCap, FaLeaf, FaBox, FaGamepad, FaTimes } from "react-icons/fa";
+import { FaGraduationCap, FaLeaf, FaBox, FaGamepad, FaChalkboardTeacher, FaBook, FaBrain, FaTimes } from "react-icons/fa";
 
 const projectsList = [
   {
@@ -46,6 +46,39 @@ const projectsList = [
       "Optimized performance for smooth gameplay",
     ],
     icon: <FaGamepad />,
+  },
+  {
+    title: "E-Learning System — SDLC",
+    description: "An intuitive platform supporting online learning with robust SDLC methodology.",
+    details: [
+      "Developed using React.js and Node.js",
+      "Focus on intuitive interface and responsive design",
+      "Supports course creation, enrollment, and assessments",
+      "Enhanced learning experience for students and instructors",
+    ],
+    icon: <FaChalkboardTeacher />,
+  },
+  {
+    title: "Library Management System",
+    description: "Streamlines the management of library resources using Java.",
+    details: [
+      "Developed in Java with object-oriented design",
+      "Features: Book cataloging, loan tracking, user account management",
+      "Automates key library tasks and maintains accurate records",
+      "Intuitive interface for both staff and users",
+    ],
+    icon: <FaBook />,
+  },
+  {
+    title: "MediMind — AI-driven Healthcare Platform",
+    description: "AI platform for symptom analysis, disease prediction, and appointment booking.",
+    details: [
+      "AI-powered symptom selection and disease prediction",
+      "Seamless appointment scheduling",
+      "User-friendly interface for healthcare management",
+      "Personalized recommendations and efficient healthcare solutions",
+    ],
+    icon: <FaBrain />,
   },
 ];
 

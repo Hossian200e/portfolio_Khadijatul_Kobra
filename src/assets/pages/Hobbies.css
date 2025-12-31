@@ -1,0 +1,71 @@
+.hobbies-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.hobbies-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.hobbies-intro {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.hobby-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  background: #e0e7ff;
+}
+
+.hobby-icon {
+  font-size: 36px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.hobby-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* Dark Mode */
+body.dark-mode .hobby-card {
+  background: #1f1f1f;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .hobby-card:hover {
+  background: #3730a3;
+}
+
+body.dark-mode .hobby-icon,
+body.dark-mode .hobby-name {
+  color: #e2e8f0;
+}

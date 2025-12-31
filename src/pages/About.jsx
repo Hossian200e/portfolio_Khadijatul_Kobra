@@ -1,73 +1,104 @@
 import React from "react";
 import "../assets/pages/About.css";
 import {
-  FaGraduationCap,
-  FaMedal,
-  FaStar,
-  FaProjectDiagram,
+  FaSeedling,
+  FaUsers,
+  FaAward,
   FaLightbulb,
+  FaRocket,
+  FaHandshake,
   FaBriefcase,
+  FaChartLine,
+  FaCompass,
 } from "react-icons/fa";
 
 const milestones = [
   {
-    year: "2022",
+    year: "Early Phase",
     title: "The Beginning",
-    icon: <FaGraduationCap />,
+    icon: <FaSeedling />,
     description: [
-      "Started my Computer Science journey at University of Asia Pacific.",
-      "Fell in love with competitive programming on Codeforces.",
-      "Enrolled in BSc (Eng.) CSE at UAP.",
-      "Discovered the beauty of problem-solving.",
-      "Solved my first 200 problems.",
-      "Realized programming can change lives.",
+      "Started my journey with curiosity and a strong desire to learn.",
+      "Built discipline and consistency through regular practice.",
+      "Learned the value of patience, focus, and persistence.",
+      "Developed a mindset of continuous improvement.",
     ],
   },
   {
-    year: "2023",
+    year: "Learning Curve",
+    title: "Skill Development",
+    icon: <FaChartLine />,
+    description: [
+      "Strengthened problem-solving and analytical thinking.",
+      "Improved adaptability by learning from mistakes.",
+      "Focused on building a solid foundation of core skills.",
+      "Developed confidence through consistent effort.",
+    ],
+  },
+  {
+    year: "Growth Phase",
     title: "Growth & Leadership",
-    icon: <FaMedal />,
+    icon: <FaUsers />,
     description: [
-      "Technical Lead @ UAP Programming Contest Club.",
-      "Junior Representative @ Math Club, CSE-UAP.",
-      "Started mentoring 1st-year students in competitive programming.",
-      "Champion of Ekushey Intra Department Programming Contest 2023.",
+      "Took initiative in team-based environments.",
+      "Developed leadership through guidance and collaboration.",
+      "Improved communication and interpersonal skills.",
+      "Learned to balance responsibility with teamwork.",
     ],
   },
   {
-    year: "2023-2024",
+    year: "Professional Growth",
     title: "Recognition & Excellence",
-    icon: <FaStar />,
+    icon: <FaAward />,
     description: [
-      "ICPC Jamilur Reza Chowdhury Scholarship recipient (3 semesters).",
-      "Codeforces Specialist (Max Rating: 1438).",
-      "CodeChef 3 Stars (Max Rating: 1635).",
-      "Permanent trainer at UAP Programming Contest Club.",
-      "Received VC's Awards & Dean's Awards regularly.",
-      "ICPC Regionalist.",
+      "Recognized for dedication, reliability, and work quality.",
+      "Maintained high standards and accountability.",
+      "Built trust through consistency and professionalism.",
+      "Focused on delivering meaningful results.",
     ],
   },
   {
-    year: "2024",
-    title: "ICPC & Projects",
-    icon: <FaProjectDiagram />,
-    description: [
-      "ICPC Dhaka Regionalist 2024.",
-      "Competed against best programmers in Bangladesh.",
-      "Developed TechReform BD 2 e-commerce platform.",
-      "Created Catppuccin Dark Pro VSCode theme (3,300+ downloads).",
-    ],
-  },
-  {
-    year: "2025 (Present)",
+    year: "Present",
     title: "Always Learning",
     icon: <FaLightbulb />,
     description: [
-      "Maintaining CGPA 3.81/4.00 (after 7 semesters).",
-      "Built DevStudy AI Suite with Next.js 15 & React 19.",
-      "Exploring AI/ML and modern web technologies.",
-      "Making programming easy for everyone.",
-      "Building solutions with meaningful ideas.",
+      "Continuously learning new tools and best practices.",
+      "Adapting to new challenges and environments.",
+      "Focused on long-term growth and improvement.",
+      "Committed to lifelong learning.",
+    ],
+  },
+  {
+    year: "Mindset",
+    title: "Values & Principles",
+    icon: <FaHandshake />,
+    description: [
+      "Believe in honesty, responsibility, and teamwork.",
+      "Detail-oriented with a strong work ethic.",
+      "Respectful, adaptable, and goal-focused.",
+      "Driven by purpose and consistency.",
+    ],
+  },
+  {
+    year: "Direction",
+    title: "Vision & Purpose",
+    icon: <FaCompass />,
+    description: [
+      "Focused on building a meaningful professional path.",
+      "Motivated by impact and personal growth.",
+      "Striving to become a dependable contributor.",
+      "Committed to positive change and progress.",
+    ],
+  },
+  {
+    year: "Looking Ahead",
+    title: "Future Aspirations",
+    icon: <FaRocket />,
+    description: [
+      "Aiming to grow as a skilled and responsible professional.",
+      "Interested in solving real-world challenges.",
+      "Focused on continuous self-development.",
+      "Driven to make a positive impact wherever I work.",
     ],
   },
 ];
@@ -77,7 +108,8 @@ const About = () => {
     <section id="about" className="about-container">
       <h2 className="about-title">About Me</h2>
       <p className="about-intro">
-        My journey from a curious student to a passionate developer and mentor.
+        A journey driven by curiosity, growth, leadership, and continuous
+        self-improvement.
       </p>
 
       <div className="timeline">
