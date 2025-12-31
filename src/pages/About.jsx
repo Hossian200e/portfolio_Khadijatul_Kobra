@@ -1,6 +1,13 @@
 import React from "react";
 import "../assets/pages/About.css";
-import { FaGraduationCap, FaMedal, FaStar, FaProjectDiagram, FaLightbulb, FaBriefcase } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaMedal,
+  FaStar,
+  FaProjectDiagram,
+  FaLightbulb,
+  FaBriefcase,
+} from "react-icons/fa";
 
 const milestones = [
   {
@@ -13,7 +20,7 @@ const milestones = [
       "Enrolled in BSc (Eng.) CSE at UAP.",
       "Discovered the beauty of problem-solving.",
       "Solved my first 200 problems.",
-      "Realized programming can change lives."
+      "Realized programming can change lives.",
     ],
   },
   {
@@ -24,7 +31,7 @@ const milestones = [
       "Technical Lead @ UAP Programming Contest Club.",
       "Junior Representative @ Math Club, CSE-UAP.",
       "Started mentoring 1st-year students in competitive programming.",
-      "Champion of Ekushey Intra Department Programming Contest 2023."
+      "Champion of Ekushey Intra Department Programming Contest 2023.",
     ],
   },
   {
@@ -37,7 +44,7 @@ const milestones = [
       "CodeChef 3 Stars (Max Rating: 1635).",
       "Permanent trainer at UAP Programming Contest Club.",
       "Received VC's Awards & Dean's Awards regularly.",
-      "ICPC Regionalist."
+      "ICPC Regionalist.",
     ],
   },
   {
@@ -48,7 +55,7 @@ const milestones = [
       "ICPC Dhaka Regionalist 2024.",
       "Competed against best programmers in Bangladesh.",
       "Developed TechReform BD 2 e-commerce platform.",
-      "Created Catppuccin Dark Pro VSCode theme (3,300+ downloads)."
+      "Created Catppuccin Dark Pro VSCode theme (3,300+ downloads).",
     ],
   },
   {
@@ -60,7 +67,7 @@ const milestones = [
       "Built DevStudy AI Suite with Next.js 15 & React 19.",
       "Exploring AI/ML and modern web technologies.",
       "Making programming easy for everyone.",
-      "Building solutions with meaningful ideas."
+      "Building solutions with meaningful ideas.",
     ],
   },
 ];
@@ -79,24 +86,22 @@ const About = () => {
             key={index}
             className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
           >
-            {/* Big Title with Professional Icon */}
             <div className="timeline-main-title">
               <FaBriefcase className="professional-icon" />
               <h2>{milestone.title}</h2>
             </div>
 
-            {/* Small Year heading */}
             <div className="timeline-year-small">
               <span>{milestone.year}</span>
             </div>
 
-            {/* Original milestone icon */}
             <div className="timeline-marker">{milestone.icon}</div>
 
-            {/* Description List */}
             <ul className="timeline-list">
               {milestone.description.map((point, idx) => (
-                <li key={idx} className="timeline-point">{point}</li>
+                <li key={idx} className="timeline-point">
+                  {point}
+                </li>
               ))}
             </ul>
           </div>

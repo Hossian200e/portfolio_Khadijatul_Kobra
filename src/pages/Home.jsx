@@ -1,79 +1,80 @@
 import React from "react";
 import profile from "../assets/profile2.jpg";
-import bdFlag from "../assets/Flag.png"; // top of Home.jsx
+import bdFlag from "../assets/Flag.png";
+import "../assets/pages/Home.css";
 
-import "../assets/pages/Home.css"; // your CSS file
-
-// Import icons
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Home = () => {
-  // Function to download PDF
-  const downloadResume = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf"; // path to your resume in public folder
-    link.download = "Mohammad_Hossain_Resume.pdf";
-    link.click();
-  };
-
   return (
     <section className="hero" id="home">
-      {/* Left Side - Text */}
+      {/* LEFT */}
       <div className="hero-left">
         <span className="hello">Hello, I'm</span>
 
-        <h1>
+        <h1 className="hero-title">
           <span className="name-highlight">Khadijatul</span>
           <br />
           Kobra
         </h1>
 
-<p className="location">
-  <img src={bdFlag} alt="Bangladesh Flag" className="flag-icon" />
-  Dhaka, Bangladesh
-</p>
+        <p className="location">
+          <img src={bdFlag} alt="Bangladesh flag" className="flag-icon" />
+          Dhaka, Bangladesh
+        </p>
 
+        <p className="desc">
+          I'm a Computer Science student.
+          <br />
+          I build web applications and enjoy learning new technologies.
+        </p>
 
-<p className="desc">
-  I'm a Computer Science student... <br /> 
-  I build web applications and enjoy learning new technologies.
-</p>
-
-
-        {/* Buttons */}
+        {/* ACTION BUTTONS */}
         <div className="hero-buttons">
           <a href="#projects" className="btn-primary">
             View My Work →
           </a>
-          <button className="btn-outline" onClick={downloadResume}>
-            ⬇ Resume
-          </button>
+
+<a
+  href="/Khadijatul_Kobra_Resume.pdf"
+  download
+  className="btn-outline"
+>
+  ⬇ Resume
+</a>
+
         </div>
 
-        {/* Social Icons */}
+        {/* SOCIAL LINKS */}
         <div className="socials">
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/" target="_blank" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
             <FaTwitter />
           </a>
-          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <a href="https://www.facebook.com/tanisha.tafannum.9" target="_blank" aria-label="Facebook">
             <FaFacebook />
           </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
             <FaInstagram />
           </a>
         </div>
       </div>
 
-      {/* Right Side - Profile */}
+      {/* RIGHT */}
       <div className="hero-right">
         <div className="image-ring">
-          <img src={profile} alt="Profile" />
+          <img src={profile} alt="Khadijatul Kobra profile" />
         </div>
       </div>
     </section>
